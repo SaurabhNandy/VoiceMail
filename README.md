@@ -43,7 +43,7 @@ Voicemail is a mobile application, that serves as a voice based email client for
 # TODOs
 - [ ] Integrate Gmail api with the application
 - [ ] Create different folders for received mails like sent, trash, etc.
-- [ ] Add attachment support for mails.
+- [ ] Add attachment support to mails.
 
 <br>
 
