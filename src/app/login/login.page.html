@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>VoiceMail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding	ion-margin" (tap)="tapEvent()">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <div class="ion-text-center" >
+    <h3>Sign In to Gmail</h3>
+  </div>
+  <form>
+    <ion-item lines="full" >
+      <ion-label position="floating" >Email</ion-label>
+      <ion-input type="email" [(ngModel)]="username" name="username" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="text" [(ngModel)]="password" name="password" password-toggle="true" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button [hidden]="auth_button" color="primary" expand="block">Sign In</ion-button>
+        <ion-button [hidden]="!auth_button" color="danger" expand="block">Sign Out</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

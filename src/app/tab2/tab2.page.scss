@@ -1,3 +1,14 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+.active-item { 
+  --border-color: rgba(0, 0, 0, 0.5);
+  --border-width: 1px;
+  z-index: 2;
+}
+
+.base-div{
+  height: 100%;
+  width: 100%;
+}
